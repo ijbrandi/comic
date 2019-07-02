@@ -1,2 +1,0 @@
-# comic
-COMIC ART WEB PROJECT
