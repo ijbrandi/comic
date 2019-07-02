@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="keywords" content="HTML, CSS">
+	<meta name="description" content="interactive webcomic domain">
+	<meta name="author" content="Isi Brandi">
+	
+	<div align="center">
+
+	<title>J</title>
+
+	<link rel="stylesheet" type="text/css" href="CSS/estilo.css">
+	<style type="text/css">
+		.slideshow {
+		  height: 606px;
+		  max-width: 1900px;
+		  margin:  auto;
+		  position: relative;
+		  top: 130px;
+		  overflow: hidden;
+		}
+
+		.slideshow > div {
+		  height: 506px;
+		  width: 2930px;
+		  background: url(pagina/imagenes/mapuche/unu.jpg);
+		  position: absolute;
+		  top: 130px;
+		  left: 0;
+		  height: 100%;
+		 
+		}
+		.slideshow .mover-1 {
+		  animation: moveSlideshow 30s linear infinite;
+		}
+		.slideshow .mover-2 {
+		  opacity: 0;
+		  transition: opacity 0.5s ease-out;
+		  background-position: 0 -200px;
+		  animation: moveSlideshow 30s linear infinite;
+		}
+		@keyframes moveSlideshow {
+		  100% { 
+		    transform: translateX(-66.6666%);  
+		  }
+		}
+	</style>
+	
+
+</head>
+
+<body background="pagina/imagenes/mapuche/fondito.gif">
+
+<body>
+	<div class="slideshow">
+  	<div class="mover-1"></div>
+  	<div class="mover-2"></div>
+	</div>
+
+	<audio controls autoplay loop id="guardianes">
+		<source src="pagina/audio/guardianes.mp3" type="audio/mpeg">
+	</audio>
+	<audio controls autoplay loop id="rapmapu">
+		<source src="pagina/audio/portavoz.mp3" type="audio/mpeg">
+	</audio>
+	<script>
+  	var audio= document.getElementById("guardianes""rapmapu");
+  	audio.volume = 0.3;
+	</script>
+
+</body>
+</html>
